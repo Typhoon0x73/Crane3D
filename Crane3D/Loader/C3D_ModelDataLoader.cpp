@@ -118,7 +118,7 @@ namespace
 					{
 						const aiVertexWeight& aiWeight = pAiBone->mWeights[w];
 						const uint32 vertexId = aiWeight.mVertexId;
-						const float weight = aiWeight.mWeight;
+						const float weight = static_cast<float>(aiWeight.mWeight);
 						auto& exVertex = meshData.exVertices[vertexId];
 
 						for (uint32 slot = 0; slot < exVertex.boneWeights.size(); ++slot)
